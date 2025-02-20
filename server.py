@@ -4,11 +4,12 @@ import psycopg2
 app = Flask(__name__)
 
 # Database connection parameters (update these with your actual credentials)
-DB_HOST = "localhost"
-DB_NAME = "events_db"
-DB_USER = "postgres"
-DB_PASS = "1919"
-DB_PORT = "5432"  # Default PostgreSQL port
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+def get_db_connection():
+    conn = psycopg2.connect(DATABASE_URL)
+    return conn
+ # Default PostgreSQL port
 
 # Function to connect to PostgreSQL
 def get_db_connection():
