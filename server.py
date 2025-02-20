@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for
 import psycopg2
 
@@ -7,20 +8,11 @@ app = Flask(__name__)
 DATABASE_URL = os.getenv("DATABASE_URL")
 
 def get_db_connection():
+    if DATABASE_URL is None:
+        raise ValueError("❌ DATABASE_URL is not set. Please add it in Render.")
     conn = psycopg2.connect(DATABASE_URL)
     return conn
- # Default PostgreSQL port
 
-# Function to connect to PostgreSQL
-def get_db_connection():
-    conn = psycopg2.connect(
-        host=DB_HOST,
-        dbname=DB_NAME,
-        user=DB_USER,
-        password=DB_PASS,
-        port=DB_PORT
-    )
-    return conn
 
 @app.route('/')
 def index():
