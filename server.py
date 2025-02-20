@@ -42,7 +42,7 @@ def cipher():
         cursor.execute("""
             INSERT INTO cipher_chase (team_name, member1_name, member1_department_and_year, member2_name, member2_department_and_year)
             VALUES (%s, %s, %s, %s, %s)
-        """, (team_name, member1_name, member1_department_year, member2_name, member2_department_year))
+        """, (team_name, member1_name, member1_department_year, member2_name, member2_department_year,))
 
         conn.commit()
         cursor.close()
