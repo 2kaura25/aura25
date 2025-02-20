@@ -1,5 +1,6 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
+import os
 
 # Initialize Firebase app with credentials
 cred = credentials.Certificate(os.environ['GOOGLE_APPLICATION_CREDENTIALS'])
