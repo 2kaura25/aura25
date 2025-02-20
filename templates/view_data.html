@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registrations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Event Registrations</h1>
+        
+        <h2>Cipher Chase Registrations</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Team Name</th>
+                    <th>Members</th>
+                    <th>Departments</th>
+                    <th>Classes</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in cipher %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <h2>Scrunch and Pick Registrations</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Team Name</th>
+                    <th>Members</th>
+                    <th>Departments</th>
+                    <th>Classes</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in scrunch %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <h2>Ryz-n-Fall Registrations</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Team Name</th>
+                    <th>Members</th>
+                    <th>Departments</th>
+                    <th>Classes</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in ryz %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Dalgona Candy Registrations</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Team Name</th>
+                    <th>Members</th>
+                    <th>Departments</th>
+                    <th>Classes</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in dalgona %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Booth Registrations</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Team Name</th>
+                    <th>Members</th>
+                    <th>Departments</th>
+                    <th>Classes</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in booth %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Moviemania Registrations</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Team Name</th>
+                    <th>Members</th>
+                    <th>Departments</th>
+                    <th>Classes</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in moviemania %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+    </div>
+</body>
+</html>
